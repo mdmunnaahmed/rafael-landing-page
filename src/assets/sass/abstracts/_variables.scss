@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Loew-Black";
+    src: url(../fonts/Loew-Black.otf);
+}
+@font-face {
+    font-family: "Loew-BlackItalic";
+    src: url(../fonts/Loew-BlackItalic.otf);
+}
+@font-face {
+    font-family: "Loew-Bold";
+    src: url(../fonts/Loew-Bold.otf);
+}
+@font-face {
+    font-family: "Loew-BoldItalic";
+    src: url(../fonts/Loew-BoldItalic.otf);
+}
+@font-face {
+    font-family: "Loew-ExtraBold";
+    src: url(../fonts/Loew-ExtraBold.otf);
+}
+@font-face {
+    font-family: "Loew-ExtraBoldItalic";
+    src: url(../fonts/Loew-ExtraBoldItalic.otf);
+}
+@font-face {
+    font-family: "Loew-Heavy";
+    src: url(../fonts/Loew-Heavy.otf);
+}
+@font-face {
+    font-family: "Loew-Italic.";
+    src: url(../fonts/Loew-Italic.otf);
+}
+@font-face {
+    font-family: "Loew-Italic";
+    src: url(../fonts/Loew-Italic.otf);
+}
+@font-face {
+    font-family: "Loew-Light";
+    src: url(../fonts/Loew-Light.otf);
+}
+@font-face {
+    font-family: "Loew-LightItalic";
+    src: url(../fonts/Loew-LightItalic.otf);
+}
+@font-face {
+    font-family: "Loew-Medium";
+    src: url(../fonts/Loew-Medium.otf);
+}
+@font-face {
+    font-family: "Loew-MediumItalic";
+    src: url(../fonts/Loew-MediumItalic.otf);
+}
+@font-face {
+    font-family: "Loew-Regular";
+    src: url(../fonts/Loew-Regular.otf);
+}
+@font-face {
+    font-family: "Loew-Thin";
+    src: url(../fonts/Loew-Thin.otf);
+}
+@font-face {
+    font-family: "oew-ThinItalic";
+    src: url(../fonts/Loew-ThinItalic.otf);
+}
+
+:root {
+    --heading: hsl(211, 72%, 22%);
+    --body: hsl(211, 72%, 22%);
+    --base: rgb(16, 55, 96);
+
+    --primary: rgb(243, 78, 78);
+    --secondary: rgb(143, 152, 147);
+    --success: rgb(106, 192, 106);
+    --danger: rgb(222, 52, 52);
+    --warning: rgb(255, 112, 28);
+    --info: rgb(113, 137, 255);
+    --dark: rgb(12, 60, 32);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+}
