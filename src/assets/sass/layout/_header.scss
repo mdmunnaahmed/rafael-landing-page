@@ -7,22 +7,45 @@
     right: 0;
     z-index: 3;
     background-color: #fff;
+    @include breakpoint(max-lg) {
+        top: -1px;
+    }
 }
 .middle-content {
     gap: 74px;
+    @include breakpoint(max-lg) {
+        gap: 30px;
+    }
 }
-
+.logo {
+    img {
+        max-width: 170px;
+        @include breakpoint(max-lg) {
+            max-width: 150px;
+        }
+    }
+}
 .middle-content div {
     width: 200px;
     font-family: "Loew-Regular";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
+    @include breakpoint(max-lg) {
+        font-size: 12px;
+        width: 150px;
+    }
     line-height: 1.3;
     text-align: center;
     color: #103762;
     &.middle-content-right {
         width: 215px;
+        @include breakpoint(max-lg) {
+            width: 180px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 11px;
+        }
     }
 }
 .header-btn {
@@ -37,6 +60,10 @@
         line-height: 1;
         display: block;
         transition: all ease 0.3s;
+        @include breakpoint(max-lg) {
+            font-size: 12px;
+            padding: 7px 10px 10px;
+        }
         &:hover {
             background-color: #000;
         }

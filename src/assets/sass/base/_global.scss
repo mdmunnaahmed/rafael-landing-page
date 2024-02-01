@@ -14,7 +14,7 @@ body {
     max-width: 1000px;
     padding-inline: 16px;
     margin-inline: auto;
-    @include breakpoint(max-sm) {
+    @include breakpoint(max-md) {
         max-width: 400px;
     }
 }
@@ -101,6 +101,12 @@ h1 {
     font-size: 50px;
     font-family: "Loew-Black";
     color: #103762;
+    @include breakpoint(max-lg) {
+        font-size: 38px;
+    }
+    @include breakpoint(max-md) {
+        line-height: 1.1;
+    }
 }
 h2 {
     font-size: 24px;

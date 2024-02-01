@@ -1,3 +1,19 @@
+.mobile-content {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 350px;
+    margin-inline: auto;
+    .logo {
+        max-width: 130px;
+    }
+    .content {
+        max-width: 170px;
+    }
+}
+
 .hero-bg-shape {
     position: absolute;
     left: 0;
@@ -12,6 +28,12 @@
 }
 .hero-section {
     padding-top: 100px;
+    @include breakpoint(max-lg) {
+        padding-top: 80px;
+    }
+    @include breakpoint(max-md) {
+        padding-top: 20px;
+    }
     .container {
         position: relative;
         z-index: 1;
@@ -19,16 +41,36 @@
 }
 .hero-wrapper {
     padding-left: 50px;
+    @include breakpoint(max-lg) {
+        padding-left: 0;
+    }
 }
 .hero-content {
     max-width: 470px;
+    @include breakpoint(max-md) {
+        width: 100%;
+        text-align: center;
+        margin-inline: auto;
+    }
     h2 {
         font-size: 45px;
+        @include breakpoint(max-lg) {
+            font-size: 32px;
+        }
+        @include breakpoint(max-md) {
+            line-height: 1.1;
+        }
     }
     span {
         font-size: 18px;
         margin-bottom: 10px;
         color: #103762;
+        @include breakpoint(max-lg) {
+            font-size: 16px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 14px;
+        }
     }
     .offer-text {
         font-family: "Loew-Bold";
@@ -39,6 +81,13 @@
         background-color: hsl(211, 72%, 22%);
         margin-bottom: 25px;
         margin-top: 20px;
+        @include breakpoint(max-lg) {
+            font-size: 15px;
+        }
+        @include breakpoint(max-lg) {
+            font-size: 14px;
+            padding: 6px 10px;
+        }
     }
 }
 
@@ -51,6 +100,18 @@
     box-shadow: 5px 4px 15px 6px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     position: relative;
+    @include breakpoint(max-md) {
+        box-shadow: rgba(93, 93, 93, 0.15) 2px 0 30px 0;
+    }
+    @include breakpoint(max-lg) {
+        width: 320px;
+        padding-inline: 15px;
+        padding-top: 50px;
+    }
+    @include breakpoint(max-md) {
+        margin-inline: auto;
+        margin-top: 100px;
+    }
     .save-img {
         position: absolute;
         top: -75px;
@@ -58,9 +119,17 @@
         transform: translateX(-50%);
         width: 140px;
         height: 140px;
+        @include breakpoint(max-lg) {
+            width: 120px;
+            height: 120px;
+        }
         img {
             width: 140px;
             height: 140px;
+            @include breakpoint(max-lg) {
+                width: 120px;
+                height: 120px;
+            }
         }
     }
     p {
@@ -70,6 +139,9 @@
         text-align: center;
         margin-bottom: 25px;
         margin-top: 5px;
+        @include breakpoint(max-lg) {
+            font-size: 14px;
+        }
         span {
             font-family: "Loew-ExtraBold";
         }
@@ -148,6 +220,15 @@
     margin-top: -100px;
     padding-left: 25px;
     padding-bottom: 21px;
+    @include breakpoint(max-lg) {
+        margin-top: -80px;
+    }
+    @include breakpoint(max-md) {
+        margin-top: 45px;
+        padding-bottom: 0;
+        justify-content: center;
+        padding-left: 0;
+    }
 }
 // brand section end
 
@@ -155,6 +236,12 @@
     position: relative;
     padding-bottom: 45px;
     padding-top: 80px;
+    @include breakpoint(max-lg) {
+        padding-top: 60px;
+    }
+    @include breakpoint(max-md) {
+        padding-bottom: 35px;
+    }
     &::before {
         position: absolute;
         content: "";
@@ -164,6 +251,9 @@
         height: 495px;
         background-color: #e7e7ea;
         z-index: -1;
+        @include breakpoint(max-md) {
+            height: 370px;
+        }
     }
     .container {
         max-width: 822px;
@@ -174,13 +264,26 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 32px;
+    @include breakpoint(max-lg) {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 }
 .experience-thumb {
+    @include breakpoint(max-lg) {
+        text-align: center;
+    }
     .experience-thumb-img {
         width: 100%;
         border-radius: 5px;
         height: 450px;
         object-fit: cover;
+        @include breakpoint(max-lg) {
+            max-width: 600px;
+            height: 300px;
+            margin-inline: auto;
+            text-align: center;
+        }
     }
 }
 .thumb-content-wrapper {
@@ -191,11 +294,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 25px;
+    @include breakpoint(max-lg) {
+        max-width: 530px;
+        text-align: left;
+        justify-content: center;
+        margin-left: 70px;
+    }
+    @include breakpoint(max-md) {
+        margin-top: -130px;
+        max-width: 100%;
+        gap: 0;
+        margin-left: 0 !important;
+    }
     .thumb {
         img {
             width: 245px;
             height: 332px;
             object-fit: contain;
+            @include breakpoint(max-lg) {
+                width: 170px;
+                height: 280px;
+            }
+            @include breakpoint(max-md) {
+                display: none;
+            }
         }
     }
     .content {
@@ -203,6 +325,13 @@
         font-size: 18px;
         font-family: "Loew-Black";
         margin-top: 120px;
+        @include breakpoint(max-lg) {
+            font-size: 16px;
+            margin-top: 100px;
+        }
+        @include breakpoint(max-md) {
+            margin-top: 170px;
+        }
         li {
             margin-bottom: 10px;
             img {
@@ -217,17 +346,29 @@
 .door-section {
     padding-top: 40px;
     padding-bottom: 100px;
+    @include breakpoint(max-md) {
+        padding-bottom: 80px;
+    }
 }
 .door-wrapper {
     gap: 30px 0;
     max-width: 800px;
     margin-inline: auto;
+    @include breakpoint(max-lg) {
+        max-width: 680px;
+    }
 }
 .single-door-item {
     width: calc(100% / 3);
     text-align: center;
+    @include breakpoint(max-md) {
+        width: calc(100% / 2);
+    }
     .door-content {
         margin-top: 20px;
+        @include breakpoint(max-md) {
+            margin-top: 15px;
+        }
         h6 {
             color: #616161;
         }
@@ -238,12 +379,27 @@
 }
 .door-top-content {
     gap: 20px;
+    @include breakpoint(max-md) {
+        text-align: center;
+        margin-inline: auto;
+    }
     h2 {
         font-size: 38px;
         color: #616161;
         text-align: right;
         max-width: 667px;
         line-height: 1.2;
+        @include breakpoint(max-lg) {
+            font-size: 26px;
+            width: 460px;
+        }
+        @include breakpoint(max-md) {
+            max-width: 100%;
+            margin-inline: auto;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 0;
+        }
         span {
             color: #103762;
             display: inline;
@@ -253,6 +409,16 @@
         font-size: 18px;
         color: #616161;
         width: 255px;
+        @include breakpoint(max-lg) {
+            width: 230px;
+            font-size: 16px;
+        }
+        @include breakpoint(max-md) {
+            text-align: center;
+            margin-inline: auto;
+            width: 100%;
+            max-width: 300px;
+        }
         margin-bottom: 10px;
         p {
             margin-bottom: 0;
@@ -271,9 +437,15 @@
     padding-top: 50px;
     padding-bottom: 70px;
     background-color: #e7e7ea;
+    @include breakpoint(max-md) {
+        padding-top: 30px;
+    }
     .button-wrapper {
         gap: 40px;
         margin: 0;
+        @include breakpoint(max-md) {
+            gap: 20px;
+        }
         a {
             margin: 0;
             font-size: 20px;
@@ -283,11 +455,16 @@
             padding-inline: 20px;
             line-height: 1;
             padding-block: 15px;
+            border-width: 2px;
             &:first-child {
                 background-color: transparent;
                 color: #103762;
                 text-decoration: underline;
                 border-width: 2px;
+                @include breakpoint(max-md) {
+                    font-size: 16px;
+                    min-width: 263.48px;
+                }
                 &:hover {
                     background-color: #103762;
                     color: #fff;
@@ -299,6 +476,9 @@
                 background-color: #103762;
                 color: #fff;
                 text-decoration: none;
+                @include breakpoint(max-md) {
+                    font-size: 15px;
+                }
                 &:hover {
                     background-color: #000;
                 }
@@ -319,6 +499,12 @@
             width: 280px;
             height: 1px;
             background-color: #103762;
+            @include breakpoint(max-lg) {
+                width: 250px;
+            }
+            @include breakpoint(max-md) {
+                width: 80px;
+            }
         }
         &::after {
             right: 0;
@@ -347,11 +533,28 @@
     padding-top: 0;
     margin-top: 70px;
     gap: 30px;
+    @include breakpoint(max-lg) {
+        gap: 10px;
+        padding-inline: 20px;
+    }
+    @include breakpoint(max-md) {
+        max-width: 280px;
+    }
 }
 .single-itembox {
     width: 180px;
+    @include breakpoint(max-lg) {
+        width: 165px;
+    }
+    @include breakpoint(max-md) {
+        margin-inline: auto;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
     text-align: center;
     transform: translateY(-25px);
+
     .icon {
         img {
             width: 55px;
@@ -388,6 +591,12 @@
     padding-bottom: 130px;
     .review-item {
         transform: translate(-42%, -78%);
+        @include breakpoint(max-lg) {
+            transform: translate(-30%, -78%);
+        }
+        @include breakpoint(max-lg) {
+            transform: translate(0%, -78%);
+        }
     }
 }
 .review-best-thumb {
@@ -395,6 +604,13 @@
     margin-inline: auto;
     height: 435px;
     border-radius: 5px;
+    @include breakpoint(max-lg) {
+        max-width: 550px;
+        max-height: 330px;
+    }
+    @include breakpoint(max-md) {
+        width: 100%;
+    }
     img {
         border-radius: 5px;
         width: 100%;
@@ -408,6 +624,14 @@
     text-align: center;
     color: #616161;
     margin-bottom: 60px;
+    @include breakpoint(max-lg) {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 }
 // review best section end
 
@@ -417,6 +641,13 @@
 }
 .gallery-title {
     font-size: 36px;
+    @include breakpoint(max-lg) {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 24px;
+    }
     text-align: center;
     max-width: 650px;
     margin-inline: auto;
@@ -427,10 +658,25 @@
     max-width: 770px;
     margin-inline: auto;
     gap: 22px;
+    @include breakpoint(max-lg) {
+        justify-content: center;
+        gap: 20px;
+    }
+    @include breakpoint(max-md) {
+        gap: 15px;
+    }
     .gallery-left-thumb {
         width: 312px;
         height: 538px;
         border-radius: 5px;
+        @include breakpoint(max-lg) {
+            width: 280px;
+            height: 470px;
+        }
+        @include breakpoint(max-md) {
+            width: 170px;
+            height: 308px;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -440,6 +686,12 @@
     }
     .gallery-right {
         width: 427px;
+        @include breakpoint(max-lg) {
+            width: 350px;
+        }
+        @include breakpoint(max-md) {
+            width: 158px;
+        }
         .gallery-subthumb {
             img {
                 width: 100%;
@@ -450,10 +702,23 @@
             &:first-child {
                 height: 219px;
                 margin-bottom: 17px;
+                @include breakpoint(max-lg) {
+                    height: 197px;
+                    margin-bottom: 15px;
+                }
+                @include breakpoint(max-md) {
+                    height: 130px;
+                }
             }
             &:last-child {
                 img {
                     height: 301px;
+                    @include breakpoint(max-lg) {
+                        height: 258px;
+                    }
+                    @include breakpoint(max-md) {
+                        height: 160px;
+                    }
                 }
             }
         }
@@ -479,18 +744,35 @@
     height: 400px;
     object-fit: cover;
     border-radius: 5px;
+    @include breakpoint(max-lg) {
+        height: 350px;
+    }
+    @include breakpoint(max-md) {
+        height: 375px;
+        width: 100%;
+    }
 }
 .review-item {
     background: rgba(16, 55, 98, 0.65);
     border-radius: 5px;
     width: 430px;
+    @include breakpoint(max-lg) {
+        width: 400px;
+    }
+    @include breakpoint(max-md) {
+        width: 100%;
+        max-width: 330px;
+    }
     margin-inline: auto;
     position: relative;
     text-align: center;
     padding-inline: 20px;
     padding-top: 20px;
     padding-bottom: 5px;
-    transform: translateY(125%);
+    transform: translateY(110%);
+    @include breakpoint(max-lg) {
+        transform: translateY(84%);
+    }
     .name {
         font-size: 20px;
         font-family: "Loew-Black";
@@ -508,6 +790,9 @@
     p {
         font-size: 15px;
         // font-family: "Loew-ExtraBold";
+        @include breakpoint(max-lg) {
+            font-size: 14px;
+        }
         font-family: "Loew-Medium";
         color: #fff;
         line-height: 1.1;
@@ -531,6 +816,15 @@
     .button-wrapper {
         gap: 40px;
         margin: 0;
+        @include breakpoint(max-lg) {
+            gap: 30px;
+        }
+        @include breakpoint(max-md) {
+            gap: 20px;
+            a {
+                min-width: 263.48px;
+            }
+        }
         a {
             margin: 0;
             font-size: 20px;
@@ -539,12 +833,15 @@
             width: auto;
             padding-inline: 20px;
             line-height: 1;
+            border-width: 2px;
             padding-block: 15px;
+            @include breakpoint(max-lg) {
+                font-size: 16px;
+            }
             &:first-child {
                 background-color: transparent;
                 color: #103762;
                 text-decoration: underline;
-                border-width: 2px;
                 &:hover {
                     background-color: #103762;
                     color: #fff;
@@ -556,6 +853,9 @@
                 background-color: #103762;
                 color: #fff;
                 text-decoration: none;
+                @include breakpoint(max-lg) {
+                    font-size: 15px;
+                }
                 &:hover {
                     background-color: #000;
                 }
@@ -571,16 +871,43 @@
     margin-inline: auto;
     margin-bottom: 20px;
     padding-block: 10px;
+    @include breakpoint(max-md) {
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
     h2 {
         font-size: 60px;
+        @include breakpoint(max-lg) {
+            font-size: 48px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 44px;
+        }
     }
     .left-content {
         text-align: right;
         width: 295px;
+        @include breakpoint(max-md) {
+            width: 100%;
+            text-align: center;
+        }
     }
     .text-middile {
+        @include breakpoint(max-md) {
+            width: 100%;
+            text-align: center;
+        }
         h2 {
             font-size: 38px;
+            @include breakpoint(max-lg) {
+                font-size: 28px;
+            }
+            @include breakpoint(max-md) {
+                font-size: 28px;
+                line-height: 1;
+                padding: 0;
+            }
         }
     }
     .right-content {
@@ -588,6 +915,12 @@
         h2 {
             font-size: 38px;
             color: #616161;
+            @include breakpoint(max-lg) {
+                font-size: 30px;
+            }
+            @include breakpoint(max-md) {
+                font-size: 24px;
+            }
         }
     }
 }
@@ -597,6 +930,12 @@
     font-family: "Loew-Medium";
     text-align: center;
     margin-bottom: 20px;
+    @include breakpoint(max-lg) {
+        font-size: 16px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 14px;
+    }
 }
 .request-text {
     font-size: 24px;
@@ -607,6 +946,12 @@
     line-height: 1;
     margin-bottom: 35px;
     margin-top: 20px;
+    @include breakpoint(max-lg) {
+        font-size: 19px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 16px;
+    }
     span {
         font-family: "Loew-Black";
         display: inline;
